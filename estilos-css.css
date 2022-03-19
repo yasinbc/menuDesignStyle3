@@ -1,0 +1,132 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.desktop-nav{
+    width: 100vw;
+    height: 45px;
+    background: black;
+    display: block;
+    padding: 10px;
+}
+
+.desktop-nav__ul{
+    color: red;
+    font-family: Georgia;
+}
+
+.desktop-nav__ul-li{
+    display: inline-block;
+    margin: 4px;;
+    padding: 4px;
+    list-style: none;
+    font-size: 20px;
+}
+
+.desktop-nav__ul-li i{
+    display: block;
+    padding: 5px;
+}
+
+.desktop-nav__ul-li i a{
+    padding: 9px;
+    color: red;
+    text-decoration: none;
+}
+
+.desktop-nav__ul-li i:hover > a{
+    color: white;
+    font-size: 22px;
+    margin: 0px;
+}
+
+.desktop-nav__ul-li i:hover{
+    color: white;
+    font-size: 22px;
+    margin: 0px;
+}
+
+.responsive-nav{
+    display: none;
+}
+
+
+@media only screen and (max-width: 500px){
+    .desktop-nav{
+        display: none;
+    }
+
+    .responsive-nav-icon{
+        position: relative;
+        color: red;
+        font-size: 45px;
+        top: 3px;
+        left: 5px;
+        transform: rotate(-90deg);
+        transition: transform 0.5s;
+    }
+
+    .responsive-nav:hover .responsive-nav-icon{
+        transform: rotate(0deg);
+    }
+
+    #responsive-nav-desplegar:hover > #responsive-nav-desplegado{
+        transition: top 0.5s;
+        top: 1vh;
+    }
+
+    .responsive-nav{
+        display: block;
+        width: 100vw;
+        height: 50px;
+        background: black;
+        list-style: none;
+    }
+
+    .responsive-nav__ul{
+        position: relative;
+        top: 55px;
+        top: -38vh;
+        z-index: -100;
+    }
+
+    .responsive-nav__ul-li{
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid grey;
+        border-radius: 20px;
+        background: rgb(252, 194, 194);
+    }
+    
+    .responsive-nav__ul-li i {
+        margin: 5px;
+        padding: 5px;
+        color: red;
+    }
+
+    .responsive-nav__ul-li i a{
+        margin: 5px;
+        padding: 5px;
+        text-decoration: none;
+        color: red;
+    }
+
+    .responsive-nav__ul-li i:hover > a{
+        color: rgb(252, 129, 129);
+    }
+    
+    .responsive-nav__ul-li i:hover{
+        color: rgb(255, 129, 129);
+        
+    }
+
+    .responsive-nav__ul-li:hover > i{
+        list-style: none;
+        margin: auto;
+        transform: scale(1.04);
+        transition: all 0.5s;
+        width: 90vw;
+        height: 30px;
+    }
+}
